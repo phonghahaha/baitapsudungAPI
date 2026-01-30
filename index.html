@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý Sản phẩm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="padding: 20px;">
+        <h2>Quản lý danh sách sản phẩm</h2>
+        
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Tìm theo tiêu đề..." oninput="handleSearch()">
+            
+            <select id="pageSize" onchange="handlePageSize()">
+                <option value="5">Hiển thị 5</option>
+                <option value="10">Hiển thị 10</option>
+                <option value="20">Hiển thị 20</option>
+            </select>
+
+            <button onclick="handleSort('title')">Sắp xếp Tên</button>
+            <button onclick="handleSort('price')">Sắp xếp Giá</button>
+        </div>
+
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Hình ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá ($)</th>
+                </tr>
+            </thead>
+            <tbody id="productBody"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

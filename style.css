@@ -1,0 +1,34 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Quan trọng: 1 dòng đen, 1 dòng trắng */
+tr:nth-child(even) {
+    background-color: #ffffff;
+    color: #000;
+}
+
+tr:nth-child(odd) {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Đảm bảo hình hiển thị đầy đủ */
+img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+.controls {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+}
